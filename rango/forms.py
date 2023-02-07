@@ -1,5 +1,6 @@
 from django import forms
 from rango.models import Page, Category
+
 class CategoryForm(forms.ModelForm):
     name = forms.CharField(max_length=128,
                            help_text="Please enter the category name.")
@@ -9,6 +10,7 @@ class CategoryForm(forms.ModelForm):
     class Meta:
         model = Category
         fields = ('name',)
+
 class PageForm(forms.ModelForm):
     title = forms.CharField(max_length=128,
                             help_text="Please enter the title of the page.")
